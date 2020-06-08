@@ -1,0 +1,22 @@
+version: "2.1"
+
+orbs:
+  architect: giantswarm/architect@0.8.14
+
+jobs:
+  build:
+    docker:
+      - image: "alpine:3.7"
+    steps:
+      - run:
+          name: "The first step"
+          command: "echo 'Hello WOrld'"
+      - run:
+          name: "The foo step"
+          command: "echo '- foo: quux'"
+      - run:
+          name: "The bar step"
+          command: "echo '- bar: quux'"
+      - run:
+          name: "The baz step"
+          command: "echo '- baz: quux'"
